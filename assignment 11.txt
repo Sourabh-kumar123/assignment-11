@@ -1,0 +1,98 @@
+ANSWER 1:-
+ It allows you to write code that can handle potential errors or exceptional situations gracefully,
+ preventing the program from crashing and providing a fallback mechanism to handle unexpected condition.
+
+
+ANSWER 2:-
+try:
+    # Code that might raise an exception
+    # ...
+except ExceptionType1:
+    # Code to handle ExceptionType1
+    # ...
+except ExceptionType2:
+    # Code to handle ExceptionType2
+    # ...
+except:
+    # Code to handle any other exception
+    # ...
+
+
+ANSWER 3:-If an exception occurs inside a try block and there is no matching except block to handle that specific exception type,
+ the exception is not caught and propagated further up the call stack. This means that the program will terminate, and an error message will be displayed, 
+indicating the unhandled exception
+
+
+
+ANSWER 5:-Specific Exception Type:
+When you specify a particular exception type in an except block, such as except ValueError: or except FileNotFoundError:, 
+you are explicitly indicating that you want to catch and handle that specific type of exception. 
+
+Bare Except Block:
+A bare except block, written as except:, catches all exceptions regardless of their type. It serves as a fallback mechanism to 
+handle any unexpected or unknown exceptions that may occur
+
+
+ANSWER 7:-
+ EOFError:-This error commonly occurs when reading user input using functions like input() and the user prematurely terminates the inpuT
+FloatingPointError:This error can occur in scenarios like division by zero, taking the square root of a negative number, or performing other invalid mathematical operations involving floating-point numbers
+IndexError:-This error typically occurs when attempting to access an element in a list, tuple, or other sequence using an index that is out of range
+Memory error:- This error can occur when attempting to create large data structures, load large files, or execute memory-intensive operations without sufficient memory capacity.
+OverflowError:-An OverflowError is raised when the result of an arithmetic operation exceeds the maximum representable value for a numeric type.
+TabError:-A TabError is raised when there are inconsistencies or errors in the indentation of code that uses a mixture of tabs and spaces for indentation.
+ValueError: ValueError is raised when a function receives an argument of the correct type but an invalid value for that type.
+
+ANSWER 8:-
+a)Program to divide two numbers:
+try:
+    num1 = int(input("Enter the first number: "))
+    num2 = int(input("Enter the second number: "))
+    result = num1 / num2
+    print("Result:", result)
+except ZeroDivisionError:
+    print("Error: Cannot divide by zero!")
+except ValueError:
+    print("Error: Invalid input! Please enter numeric values.")
+
+b)Program to convert a string to an integer:
+try:
+    num_str = input("Enter a number: ")
+    num = int(num_str)
+    print("Converted number:", num)
+except ValueError:
+    print("Error: Invalid input! Please enter a valid integer.")
+
+c)Program to access an element in a list:
+try:
+    my_list = [1, 2, 3]
+    index = int(input("Enter the index: "))
+    value = my_list[index]
+    print("Value at index", index, "is", value)
+except IndexError:
+    print("Error: Index is out of range!")
+except ValueError:
+    print("Error: Invalid input! Please enter a valid integer.")
+
+d)Program to handle a specific exception:
+num1 = int(input("Enter the first number: "))
+    num2 = int(input("Enter the second number: "))
+    result = num1 / num2
+    print("Result:", result)
+except ZeroDivisionError:
+    print("Error: Cannot divide by zero!")
+except ValueError:
+    print("Error: Invalid input! Please enter numeric values.")
+
+e)Program to handle any exception:
+try:
+    # Code that may raise exceptions
+    # ...
+except Exception as e:
+    print("An error occurred:", str(e))
+
+
+
+
+
+
+
